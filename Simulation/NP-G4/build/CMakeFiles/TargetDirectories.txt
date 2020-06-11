@@ -1,3 +1,0 @@
-/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/rebuild_cache.dir
-/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/ourmain.dir
-/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/edit_cache.dir
