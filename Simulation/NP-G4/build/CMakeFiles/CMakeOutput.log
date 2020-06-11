@@ -1,4 +1,4 @@
-The system is: Linux - 5.3.0-45-generic - x86_64
+The system is: Linux - 5.3.0-53-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/3.10.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/3.10.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp
+Change Dir: /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ea659/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ea659.dir/build.make CMakeFiles/cmTC_ea659.dir/build
-make[1]: Entering directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ea659.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_ea659.dir/testCCompiler.c.o   -c /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_ea659
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ea659.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_ea659.dir/testCCompiler.c.o  -o cmTC_ea659 
-make[1]: Leaving directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_228f9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_228f9.dir/build.make CMakeFiles/cmTC_228f9.dir/build
+make[1]: Entering directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_228f9.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_228f9.dir/testCCompiler.c.o   -c /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_228f9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_228f9.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_228f9.dir/testCCompiler.c.o  -o cmTC_228f9 
+make[1]: Leaving directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp
+Change Dir: /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6ac98/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6ac98.dir/build.make CMakeFiles/cmTC_6ac98.dir/build
-make[1]: Entering directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6ac98.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_6ac98.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_6ac98
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6ac98.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_6ac98.dir/CMakeCCompilerABI.c.o  -o cmTC_6ac98 
+Run Build Command:"/usr/bin/make" "cmTC_afd3d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_afd3d.dir/build.make CMakeFiles/cmTC_afd3d.dir/build
+make[1]: Entering directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_afd3d.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_afd3d.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_afd3d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_afd3d.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_afd3d.dir/CMakeCCompilerABI.c.o  -o cmTC_afd3d 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -61,24 +61,24 @@ Thread model: posix
 gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_6ac98' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5cyaCz.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_6ac98 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_6ac98.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_6ac98' '-mtune=generic' '-march=x86-64'
-make[1]: Leaving directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_afd3d' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWt085B.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_afd3d /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_afd3d.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_afd3d' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_6ac98/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_6ac98.dir/build.make CMakeFiles/cmTC_6ac98.dir/build]
-  ignore line: [make[1]: Entering directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_6ac98.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_6ac98.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_6ac98]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6ac98.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_6ac98.dir/CMakeCCompilerABI.c.o  -o cmTC_6ac98 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_afd3d/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_afd3d.dir/build.make CMakeFiles/cmTC_afd3d.dir/build]
+  ignore line: [make[1]: Entering directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_afd3d.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_afd3d.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_afd3d]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_afd3d.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_afd3d.dir/CMakeCCompilerABI.c.o  -o cmTC_afd3d ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_6ac98' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5cyaCz.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_6ac98 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_6ac98.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_afd3d' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWt085B.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_afd3d /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_afd3d.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc5cyaCz.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccWt085B.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -115,7 +115,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_6ac98] ==> ignore
+    arg [cmTC_afd3d] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -127,7 +127,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_6ac98.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_afd3d.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -157,17 +157,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp
+Change Dir: /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_488fc/fast"
-/usr/bin/make -f CMakeFiles/cmTC_488fc.dir/build.make CMakeFiles/cmTC_488fc.dir/build
-make[1]: Entering directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_488fc.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_488fc.dir/feature_tests.c.o   -c /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_488fc
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_488fc.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_488fc.dir/feature_tests.c.o  -o cmTC_488fc 
-make[1]: Leaving directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_e7b53/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e7b53.dir/build.make CMakeFiles/cmTC_e7b53.dir/build
+make[1]: Entering directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e7b53.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_e7b53.dir/feature_tests.c.o   -c /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_e7b53
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7b53.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e7b53.dir/feature_tests.c.o  -o cmTC_e7b53 
+make[1]: Leaving directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -177,17 +177,17 @@ make[1]: Leaving directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMa
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp
+Change Dir: /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_bc36a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_bc36a.dir/build.make CMakeFiles/cmTC_bc36a.dir/build
-make[1]: Entering directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_bc36a.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_bc36a.dir/feature_tests.c.o   -c /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_bc36a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc36a.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_bc36a.dir/feature_tests.c.o  -o cmTC_bc36a 
-make[1]: Leaving directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_e0159/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e0159.dir/build.make CMakeFiles/cmTC_e0159.dir/build
+make[1]: Entering directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e0159.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_e0159.dir/feature_tests.c.o   -c /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_e0159
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e0159.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e0159.dir/feature_tests.c.o  -o cmTC_e0159 
+make[1]: Leaving directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -197,17 +197,17 @@ make[1]: Leaving directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMa
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp
+Change Dir: /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d5141/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d5141.dir/build.make CMakeFiles/cmTC_d5141.dir/build
-make[1]: Entering directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d5141.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_d5141.dir/feature_tests.c.o   -c /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_d5141
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5141.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_d5141.dir/feature_tests.c.o  -o cmTC_d5141 
-make[1]: Leaving directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_cc8df/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cc8df.dir/build.make CMakeFiles/cmTC_cc8df.dir/build
+make[1]: Entering directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cc8df.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_cc8df.dir/feature_tests.c.o   -c /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_cc8df
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cc8df.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_cc8df.dir/feature_tests.c.o  -o cmTC_cc8df 
+make[1]: Leaving directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -215,30 +215,30 @@ make[1]: Leaving directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMa
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp
+Change Dir: /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_267f0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_267f0.dir/build.make CMakeFiles/cmTC_267f0.dir/build
-make[1]: Entering directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_267f0.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_267f0.dir/testCXXCompiler.cxx.o -c /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_267f0
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_267f0.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_267f0.dir/testCXXCompiler.cxx.o  -o cmTC_267f0 
-make[1]: Leaving directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_489bd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_489bd.dir/build.make CMakeFiles/cmTC_489bd.dir/build
+make[1]: Entering directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_489bd.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_489bd.dir/testCXXCompiler.cxx.o -c /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_489bd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_489bd.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_489bd.dir/testCXXCompiler.cxx.o  -o cmTC_489bd 
+make[1]: Leaving directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp
+Change Dir: /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_14199/fast"
-/usr/bin/make -f CMakeFiles/cmTC_14199.dir/build.make CMakeFiles/cmTC_14199.dir/build
-make[1]: Entering directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_14199.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_14199.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_14199
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_14199.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_14199.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_14199 
+Run Build Command:"/usr/bin/make" "cmTC_dca46/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dca46.dir/build.make CMakeFiles/cmTC_dca46.dir/build
+make[1]: Entering directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_dca46.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_dca46.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_dca46
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dca46.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_dca46.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_dca46 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -250,24 +250,24 @@ Thread model: posix
 gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_14199' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccc7oLJZ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_14199 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_14199.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_14199' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-make[1]: Leaving directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_dca46' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsj4ZrH.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_dca46 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_dca46.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_dca46' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_14199/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_14199.dir/build.make CMakeFiles/cmTC_14199.dir/build]
-  ignore line: [make[1]: Entering directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_14199.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_14199.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_14199]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_14199.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_14199.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_14199 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_dca46/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_dca46.dir/build.make CMakeFiles/cmTC_dca46.dir/build]
+  ignore line: [make[1]: Entering directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_dca46.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_dca46.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_dca46]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dca46.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_dca46.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_dca46 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -279,13 +279,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_14199' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccc7oLJZ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_14199 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_14199.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_dca46' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsj4ZrH.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_dca46 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_dca46.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccc7oLJZ.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccsj4ZrH.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -304,7 +304,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_14199] ==> ignore
+    arg [cmTC_dca46] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -316,7 +316,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_14199.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_dca46.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -342,17 +342,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp
+Change Dir: /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c54ad/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c54ad.dir/build.make CMakeFiles/cmTC_c54ad.dir/build
-make[1]: Entering directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c54ad.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_c54ad.dir/feature_tests.cxx.o -c /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_c54ad
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c54ad.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_c54ad.dir/feature_tests.cxx.o  -o cmTC_c54ad 
-make[1]: Leaving directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_3a3ba/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3a3ba.dir/build.make CMakeFiles/cmTC_3a3ba.dir/build
+make[1]: Entering directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3a3ba.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_3a3ba.dir/feature_tests.cxx.o -c /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_3a3ba
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a3ba.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_3a3ba.dir/feature_tests.cxx.o  -o cmTC_3a3ba 
+make[1]: Leaving directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -415,17 +415,17 @@ make[1]: Leaving directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMa
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp
+Change Dir: /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a9dbc/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a9dbc.dir/build.make CMakeFiles/cmTC_a9dbc.dir/build
-make[1]: Entering directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_a9dbc.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_a9dbc.dir/feature_tests.cxx.o -c /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_a9dbc
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9dbc.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_a9dbc.dir/feature_tests.cxx.o  -o cmTC_a9dbc 
-make[1]: Leaving directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_9766d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9766d.dir/build.make CMakeFiles/cmTC_9766d.dir/build
+make[1]: Entering directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9766d.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_9766d.dir/feature_tests.cxx.o -c /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_9766d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9766d.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_9766d.dir/feature_tests.cxx.o  -o cmTC_9766d 
+make[1]: Leaving directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -488,17 +488,17 @@ make[1]: Leaving directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMa
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp
+Change Dir: /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_be05e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_be05e.dir/build.make CMakeFiles/cmTC_be05e.dir/build
-make[1]: Entering directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_be05e.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_be05e.dir/feature_tests.cxx.o -c /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_be05e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be05e.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_be05e.dir/feature_tests.cxx.o  -o cmTC_be05e 
-make[1]: Leaving directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_2c4f7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2c4f7.dir/build.make CMakeFiles/cmTC_2c4f7.dir/build
+make[1]: Entering directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2c4f7.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_2c4f7.dir/feature_tests.cxx.o -c /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_2c4f7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c4f7.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_2c4f7.dir/feature_tests.cxx.o  -o cmTC_2c4f7 
+make[1]: Leaving directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -561,17 +561,17 @@ make[1]: Leaving directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMa
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp
+Change Dir: /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_480b8/fast"
-/usr/bin/make -f CMakeFiles/cmTC_480b8.dir/build.make CMakeFiles/cmTC_480b8.dir/build
-make[1]: Entering directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_480b8.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_480b8.dir/feature_tests.cxx.o -c /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_480b8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_480b8.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_480b8.dir/feature_tests.cxx.o  -o cmTC_480b8 
-make[1]: Leaving directory '/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_47a69/fast"
+/usr/bin/make -f CMakeFiles/cmTC_47a69.dir/build.make CMakeFiles/cmTC_47a69.dir/build
+make[1]: Entering directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_47a69.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_47a69.dir/feature_tests.cxx.o -c /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_47a69
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47a69.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_47a69.dir/feature_tests.cxx.o  -o cmTC_47a69 
+make[1]: Leaving directory '/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

@@ -1,4 +1,4 @@
-# Install script for directory: /user/stu402/Documents/Final/Geant_4/NP-G4
+# Install script for directory: /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/user/stu402/Documents/Final/Geant_4/NP-G4/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

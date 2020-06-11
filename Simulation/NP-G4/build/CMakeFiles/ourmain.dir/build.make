@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /user/stu402/Documents/Final/Geant_4/NP-G4
+CMAKE_SOURCE_DIR = /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /user/stu402/Documents/Final/Geant_4/NP-G4/build
+CMAKE_BINARY_DIR = /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ourmain.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/ourmain.dir/flags.make
 
 CMakeFiles/ourmain.dir/ourmain.cc.o: CMakeFiles/ourmain.dir/flags.make
 CMakeFiles/ourmain.dir/ourmain.cc.o: ../ourmain.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ourmain.dir/ourmain.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ourmain.dir/ourmain.cc.o -c /user/stu402/Documents/Final/Geant_4/NP-G4/ourmain.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ourmain.dir/ourmain.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ourmain.dir/ourmain.cc.o -c /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/ourmain.cc
 
 CMakeFiles/ourmain.dir/ourmain.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ourmain.dir/ourmain.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /user/stu402/Documents/Final/Geant_4/NP-G4/ourmain.cc > CMakeFiles/ourmain.dir/ourmain.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/ourmain.cc > CMakeFiles/ourmain.dir/ourmain.cc.i
 
 CMakeFiles/ourmain.dir/ourmain.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ourmain.dir/ourmain.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /user/stu402/Documents/Final/Geant_4/NP-G4/ourmain.cc -o CMakeFiles/ourmain.dir/ourmain.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/ourmain.cc -o CMakeFiles/ourmain.dir/ourmain.cc.s
 
 CMakeFiles/ourmain.dir/ourmain.cc.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/ourmain.dir/ourmain.cc.o.provides.build: CMakeFiles/ourmain.dir/ourma
 
 CMakeFiles/ourmain.dir/src/YourActionInitialization.cc.o: CMakeFiles/ourmain.dir/flags.make
 CMakeFiles/ourmain.dir/src/YourActionInitialization.cc.o: ../src/YourActionInitialization.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ourmain.dir/src/YourActionInitialization.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ourmain.dir/src/YourActionInitialization.cc.o -c /user/stu402/Documents/Final/Geant_4/NP-G4/src/YourActionInitialization.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ourmain.dir/src/YourActionInitialization.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ourmain.dir/src/YourActionInitialization.cc.o -c /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/src/YourActionInitialization.cc
 
 CMakeFiles/ourmain.dir/src/YourActionInitialization.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ourmain.dir/src/YourActionInitialization.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /user/stu402/Documents/Final/Geant_4/NP-G4/src/YourActionInitialization.cc > CMakeFiles/ourmain.dir/src/YourActionInitialization.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/src/YourActionInitialization.cc > CMakeFiles/ourmain.dir/src/YourActionInitialization.cc.i
 
 CMakeFiles/ourmain.dir/src/YourActionInitialization.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ourmain.dir/src/YourActionInitialization.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /user/stu402/Documents/Final/Geant_4/NP-G4/src/YourActionInitialization.cc -o CMakeFiles/ourmain.dir/src/YourActionInitialization.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/src/YourActionInitialization.cc -o CMakeFiles/ourmain.dir/src/YourActionInitialization.cc.s
 
 CMakeFiles/ourmain.dir/src/YourActionInitialization.cc.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/ourmain.dir/src/YourActionInitialization.cc.o.provides.build: CMakeFi
 
 CMakeFiles/ourmain.dir/src/YourDetectorConstruction.cc.o: CMakeFiles/ourmain.dir/flags.make
 CMakeFiles/ourmain.dir/src/YourDetectorConstruction.cc.o: ../src/YourDetectorConstruction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ourmain.dir/src/YourDetectorConstruction.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ourmain.dir/src/YourDetectorConstruction.cc.o -c /user/stu402/Documents/Final/Geant_4/NP-G4/src/YourDetectorConstruction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ourmain.dir/src/YourDetectorConstruction.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ourmain.dir/src/YourDetectorConstruction.cc.o -c /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/src/YourDetectorConstruction.cc
 
 CMakeFiles/ourmain.dir/src/YourDetectorConstruction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ourmain.dir/src/YourDetectorConstruction.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /user/stu402/Documents/Final/Geant_4/NP-G4/src/YourDetectorConstruction.cc > CMakeFiles/ourmain.dir/src/YourDetectorConstruction.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/src/YourDetectorConstruction.cc > CMakeFiles/ourmain.dir/src/YourDetectorConstruction.cc.i
 
 CMakeFiles/ourmain.dir/src/YourDetectorConstruction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ourmain.dir/src/YourDetectorConstruction.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /user/stu402/Documents/Final/Geant_4/NP-G4/src/YourDetectorConstruction.cc -o CMakeFiles/ourmain.dir/src/YourDetectorConstruction.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/src/YourDetectorConstruction.cc -o CMakeFiles/ourmain.dir/src/YourDetectorConstruction.cc.s
 
 CMakeFiles/ourmain.dir/src/YourDetectorConstruction.cc.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/ourmain.dir/src/YourDetectorConstruction.cc.o.provides.build: CMakeFi
 
 CMakeFiles/ourmain.dir/src/YourPrimaryGeneratorAction.cc.o: CMakeFiles/ourmain.dir/flags.make
 CMakeFiles/ourmain.dir/src/YourPrimaryGeneratorAction.cc.o: ../src/YourPrimaryGeneratorAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ourmain.dir/src/YourPrimaryGeneratorAction.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ourmain.dir/src/YourPrimaryGeneratorAction.cc.o -c /user/stu402/Documents/Final/Geant_4/NP-G4/src/YourPrimaryGeneratorAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ourmain.dir/src/YourPrimaryGeneratorAction.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ourmain.dir/src/YourPrimaryGeneratorAction.cc.o -c /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/src/YourPrimaryGeneratorAction.cc
 
 CMakeFiles/ourmain.dir/src/YourPrimaryGeneratorAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ourmain.dir/src/YourPrimaryGeneratorAction.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /user/stu402/Documents/Final/Geant_4/NP-G4/src/YourPrimaryGeneratorAction.cc > CMakeFiles/ourmain.dir/src/YourPrimaryGeneratorAction.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/src/YourPrimaryGeneratorAction.cc > CMakeFiles/ourmain.dir/src/YourPrimaryGeneratorAction.cc.i
 
 CMakeFiles/ourmain.dir/src/YourPrimaryGeneratorAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ourmain.dir/src/YourPrimaryGeneratorAction.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /user/stu402/Documents/Final/Geant_4/NP-G4/src/YourPrimaryGeneratorAction.cc -o CMakeFiles/ourmain.dir/src/YourPrimaryGeneratorAction.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/src/YourPrimaryGeneratorAction.cc -o CMakeFiles/ourmain.dir/src/YourPrimaryGeneratorAction.cc.s
 
 CMakeFiles/ourmain.dir/src/YourPrimaryGeneratorAction.cc.o.requires:
 
@@ -208,7 +208,7 @@ ourmain: /data/nikhefproject/geant4.10.6/lib/libG4intercoms.so
 ourmain: /data/nikhefproject/geant4.10.6/lib/libG4global.so
 ourmain: /data/nikhefproject/geant4.10.6/lib/libG4clhep.so
 ourmain: CMakeFiles/ourmain.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ourmain"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ourmain"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ourmain.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -228,6 +228,6 @@ CMakeFiles/ourmain.dir/clean:
 .PHONY : CMakeFiles/ourmain.dir/clean
 
 CMakeFiles/ourmain.dir/depend:
-	cd /user/stu402/Documents/Final/Geant_4/NP-G4/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /user/stu402/Documents/Final/Geant_4/NP-G4 /user/stu402/Documents/Final/Geant_4/NP-G4 /user/stu402/Documents/Final/Geant_4/NP-G4/build /user/stu402/Documents/Final/Geant_4/NP-G4/build /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/ourmain.dir/DependInfo.cmake --color=$(COLOR)
+	cd /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4 /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4 /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/ourmain.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ourmain.dir/depend
 

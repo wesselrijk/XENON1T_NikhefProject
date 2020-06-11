@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /user/stu402/Documents/Final/Geant_4/NP-G4
+CMAKE_SOURCE_DIR = /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /user/stu402/Documents/Final/Geant_4/NP-G4/build
+CMAKE_BINARY_DIR = /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /user/stu402/Documents/Final/Geant_4/NP-G4/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /user/stu409/Documents/GitHub/XENON1T_NikhefProject/Simulation/NP-G4/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
