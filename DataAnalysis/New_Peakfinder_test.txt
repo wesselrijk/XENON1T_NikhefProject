@@ -1,0 +1,21 @@
+Events I tested (NG):
+    Event   Peak position
+    5       100055 / 122173
+    104     100055 / 134048
+    201     100056 / 103855
+    203     100056 / 102526
+    310     100055 / 100359
+    500     100055 / 131774, 132842, 133495
+    505     100054 / 153494, 154476
+    
+The new peakfinder works perfectly for the events above, and the zoom-in figures of the peaks are stored in the folder "TestFigures".
+
+
+Several questions (when I run the waveform viewer):
+
+1. NG event 1, in many single channels you can see the peaks, but channel 254 shows only a baseline.
+
+2. NG event 2, channel 229 has 2 peaks, channel 254 also shows one peak, but the "channellist" only gives an empty list.
+
+3. New peakfinder: for NG event 300, an error appears: "index 350798 out of the bounds for axis 0 (size 350000)". Since for this event, there is a huge peak at 144800 (height > 16000) -> maybe this is the reason of the error?
+    
