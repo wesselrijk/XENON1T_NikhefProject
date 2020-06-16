@@ -1,6 +1,6 @@
 /control/execute vis.mac
-/score/create/boxMesh boxMesh_1
-/score/mesh/boxSize 0.5 0.5 0.5 cm
+/score/create/cylinderMesh cylMesh
+/score/mesh/cylinderSize 48 97 cm
 /score/mesh/nBin 20 20 20
 /score/quantity/energyDeposit eDep MeV
 /score/quantity/nOfStep nOfStepGamma
