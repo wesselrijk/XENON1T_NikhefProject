@@ -1,6 +1,11 @@
 /control/execute vis.mac
-/score/create/cylinderMesh cylMesh
-/score/mesh/cylinderSize 48 97 cm
+
+/score/colorMap/setMinMax defaultLinearColorMap 0 10000000000
+/score/colorMap/setMinMax logColorMap 0 100000000000
+
+/score/create/cylinderMesh TopMesh
+/score/mesh/cylinderSize 48 1 cm
+/score/mesh/translate/xyz 0 0 48.5 cm
 /score/mesh/nBin 20 20 20
 /score/quantity/energyDeposit eDep MeV
 /score/quantity/nOfStep nOfStepGamma
@@ -8,4 +13,17 @@
 /score/quantity/nOfStep nOfStepEMinus
 /score/filter/particle eMinusFilter e-
 /score/close
+/score/create/cylinderMesh BottomMesh
+/score/mesh/cylinderSize 48 1 cm
+/score/mesh/translate/xyz 0 0 -48.5 cm
+/score/mesh/nBin 20 20 20
+/score/quantity/energyDeposit eDep MeV
+/score/quantity/nOfStep nOfStepGamma
+/score/filter/particle gammaFilter gamma
+/score/quantity/nOfStep nOfStepEMinus
+/score/filter/particle eMinusFilter e-
 
+/score/drawProjection TopMesh eDep
+/score/drawProjection BottomMesh eDep
+
+/score/close
