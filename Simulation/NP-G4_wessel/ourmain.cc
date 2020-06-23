@@ -9,19 +9,24 @@
 
 #include "G4PhysListFactory.hh"
 
-//#include "FTFP_BERT.hh" // physics list, double for now, since already obtained from the factory
-//#include "G4OpticalPhysics.hh" // for optical physics (includes optical photon?)
-//#include "G4EmStandardPhysics_option4.hh" // physics list
+#include "FTFP_BERT.hh" // physics list, double for now, since already obtained from the factory
+#include "G4OpticalPhysics.hh" // for optical physics (includes optical photon?)
+#include "G4EmStandardPhysics_option4.hh" // physics list
 
 #include "YourDetectorConstruction.hh"
 #include "YourPrimaryGeneratorAction.hh"
 #include "YourActionInitialization.hh"
 
+#include "UltraPhysicsList.hh" // use ultra physics list for optical stuff included?
+
 int main(int argc, char** argv) {
-  
+
+//(lets use C++ implementation of Jame's RANLUX generator)
+  G4Random::setTheEngine(new CLHEP::RanluxEngine);
+
   //1. create the RunManager object 
   G4RunManager* runManager = new G4RunManager();
-  G4ScoringManager* scoringManager = G4ScoringManager::GetScoringManager();
+  //G4ScoringManager* scoringManager = G4ScoringManager::GetScoringManager();
  
   //2. Create an object from YourDetectorConstruction and register in the Run-Manager
   YourDetectorConstruction* detector = new YourDetectorConstruction();
@@ -32,21 +37,22 @@ int main(int argc, char** argv) {
   const G4String plName = "FTFP_BERT";
   G4VModularPhysicsList* physicsList = physListFactory.GetReferencePhysList( plName );
 
-  //physicsList->ReplacePhysics(new G4EmStandardPhysics_option4());
-  //G4OpticalPhysics* opticalPhysics = new G4OpticalPhysics();
-  //opticalPhysics->SetWLSTimeProfile("delta");
+  physicsList->ReplacePhysics(new G4EmStandardPhysics_option4());
+  G4OpticalPhysics* opticalPhysics = new G4OpticalPhysics();
+  opticalPhysics->SetWLSTimeProfile("delta");
 
-  //opticalPhysics->SetScintillationYieldFactor(1.0);
-  //opticalPhysics->SetScintillationExcitationRatio(1.0);
+  opticalPhysics->SetScintillationYieldFactor(1.0);
+  opticalPhysics->SetScintillationExcitationRatio(1.0);
 
-  //opticalPhysics->SetMaxNumPhotonsPerStep(100);
-  //opticalPhysics->SetMaxBetaChangePerStep(10.0);
+  opticalPhysics->SetMaxNumPhotonsPerStep(100);
+  opticalPhysics->SetMaxBetaChangePerStep(10.0);
   
-  //opticalPhysics->SetTrackSecondariesFirst(kCerenkov, true);
-  //opticalPhysics->SetTrackSecondariesFirst(kScintillation, true);
+  opticalPhysics->SetTrackSecondariesFirst(kCerenkov, true);
+  opticalPhysics->SetTrackSecondariesFirst(kScintillation, true);
 
-  //physicsList->RegisterPhysics(opticalPhysics);
+  physicsList->RegisterPhysics(opticalPhysics);
   runManager->SetUserInitialization(physicsList);
+  //runManager->SetUserInitialization(new UltraPhysicsList()); // Geant4 won't start
 
   //5. Create your action initialization and register in the Run-Manager
   runManager->SetUserInitialization( new YourActionInitialization( detector ) );
@@ -63,7 +69,7 @@ int main(int argc, char** argv) {
   G4EventManager::GetEventManager()->GetTrackingManager()->SetVerboseLevel(1);
   
   // simulate 10 events
-  runManager->BeamOn(10); 
+  //runManager->BeamOn(10); 
   
   ui->SessionStart();
 

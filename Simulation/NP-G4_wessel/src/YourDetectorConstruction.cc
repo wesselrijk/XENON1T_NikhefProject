@@ -17,6 +17,7 @@
 #include "G4LogicalBorderSurface.hh" // for making bordersurfaces
 #include "G4RunManager.hh" // for updating runmanager
 #include "G4SystemOfUnits.hh"// Adding system of units (ns, cm, MeV, etc.)
+#include "UltraDetectorMessenger.hh" // Messenger of ultra stuff
 
 
 #include "G4PhysicalConstants.hh"
@@ -58,7 +59,10 @@ YourDetectorConstruction::YourDetectorConstruction()
   fTargetThickness = 1.0*CLHEP::cm;
   // initial gun-x position 
   fGunXPosition    = -20;
-  
+
+  // make the detector messenger
+  fDetectorMessenger = new UltraDetectorMessenger(this);  
+
   // DefineMaterials is used for liquid Xenon and PTFE materials
   DefineMaterials();
 }
@@ -101,12 +105,15 @@ void YourDetectorConstruction::DefineMaterials(){
   assert(sizeof(lxe_SCINT) == sizeof(lxe_Energy));
   G4double lxe_RIND[]  = { 1.59 , 1.57, 1.54 };
   assert(sizeof(lxe_RIND) == sizeof(lxe_Energy));
+  G4double lxe_REFL[]  = { 0.0, 0.0, 0.0, 0.0};
+  assert(sizeof(lxe_ABSL) == sizeof(lxe_Energy));
   G4double lxe_ABSL[]  = { 50.*m, 50.*m, 50.*m};
   assert(sizeof(lxe_ABSL) == sizeof(lxe_Energy));
   fLXe_mt = new G4MaterialPropertiesTable();
   fLXe_mt->AddProperty("FASTCOMPONENT", lxe_Energy, lxe_SCINT, lxenum);
   fLXe_mt->AddProperty("SLOWCOMPONENT", lxe_Energy, lxe_SCINT, lxenum);
   fLXe_mt->AddProperty("RINDEX",        lxe_Energy, lxe_RIND,  lxenum);
+  fLXe_mt->AddProperty("REFLECTIVITY",        lxe_Energy, lxe_REFL,  lxenum);
   fLXe_mt->AddProperty("ABSLENGTH",     lxe_Energy, lxe_ABSL,  lxenum);
   fLXe_mt->AddConstProperty("SCINTILLATIONYIELD",12000./MeV);
   fLXe_mt->AddConstProperty("RESOLUTIONSCALE",1.0);
@@ -116,7 +123,6 @@ void YourDetectorConstruction::DefineMaterials(){
   fLXe->SetMaterialPropertiesTable(fLXe_mt);
 
   // Set the Birks Constant for the LXe scintillator
-
   fLXe->GetIonisation()->SetBirksConstant(0.126*mm/MeV);
 
   //fPTFE https://engineering.case.edu/centers/sdle/sites/engineering.case.edu.centers.sdle/files/optical_properties_of_materials_for_concentrator_p.pdf
@@ -124,7 +130,7 @@ void YourDetectorConstruction::DefineMaterials(){
   fPTFE_mt = new G4MaterialPropertiesTable();
   const G4int NUM = 2;
   G4double XX[NUM] = {h_Planck*c_light/lambda_max, h_Planck*c_light/lambda_min} ; 
-  G4double PTFE_refl[NUM]      = { 0.95, 0.95 };
+  G4double PTFE_refl[NUM]      = { 0.99, 0.99 };
   G4double rIndexPTFE[]={ 1.38, 1.38};
   fPTFE_mt->AddProperty("RINDEX", XX,rIndexPTFE,NUM);
   fPTFE_mt->AddProperty("REFLECTIVITY", XX, PTFE_refl, NUM);
@@ -133,7 +139,6 @@ void YourDetectorConstruction::DefineMaterials(){
   // Set the Birks Constant for the PTFE scintillator
   fPTFE->GetIonisation()->SetBirksConstant(0.126*mm/MeV);
 
-
   // fGXe properties table https://arxiv.org/pdf/1512.07501.pdf for refractive index
   fGXe_mt = new G4MaterialPropertiesTable();
 
@@ -141,8 +146,10 @@ void YourDetectorConstruction::DefineMaterials(){
   const G4int wlsnum2 = sizeof(wls_Energy2)/sizeof(G4double);
  
   G4double rIndexGXe[]={ 1., 1., 1., 1.};
+  G4double fGXe_refl[]= { 0.01, 0.01, 0.01, 0.01 };
   assert(sizeof(rIndexGXe) == sizeof(wls_Energy2));
   fGXe_mt->AddProperty("RINDEX", wls_Energy2,rIndexGXe,wlsnum2);
+  fGXe_mt->AddProperty("REFLECTIVITY", wls_Energy2, fGXe_refl, wlsnum2);
   fGXe->SetMaterialPropertiesTable(fGXe_mt);
 
   // Set the Birks Constant for the PTFE scintillator
@@ -153,10 +160,10 @@ void YourDetectorConstruction::DefineMaterials(){
 G4VPhysicalVolume* YourDetectorConstruction::Construct() {
   G4cout << " === YourDetectorConstruction::Construct() method === " << G4endl;
   // define dimensions
-  G4double targetXSize  = fTargetThickness;
-  G4double targetYZSize = 1.25*targetXSize;
-  G4double worldXSize   = 200*targetXSize;
-  G4double worldYZSize  = 200*targetYZSize;
+  G4double targetXSize  = 1*cm;
+  G4double targetYZSize = 1*targetXSize;
+  G4double worldXSize   = 500*targetXSize;
+  G4double worldYZSize  = 500*targetYZSize;
   // compute gun-x position 
   fGunXPosition  = -0.5*(targetXSize+worldXSize);
   // 
@@ -190,28 +197,9 @@ G4VPhysicalVolume* YourDetectorConstruction::Construct() {
                                                         false,                      // don't care
                                                         0                           // cpy number
                                                       );
-
-  // target 
-  G4Box*   targetSolid = new G4Box( "s0.5*targetXSizeolid-Target",
-                                    0.5*targetXSize, 
-                                    0.5*targetYZSize, 
-                                    0.5*targetYZSize   
-                                   );
-
-                                   
-  G4LogicalVolume* targetLogical = new G4LogicalVolume(targetSolid, 
-                                                       fTargetMaterial, 
-                                                       "logic-Target");                                 
-  G4VPhysicalVolume* targetPhysical = new G4PVPlacement(nullptr,
-                                                        G4ThreeVector(0., 0., 0.),
-                                                        targetLogical, 
-                                                        "Target",
-                                                        worldLogical,
-                                                        false,
-                                                        0);
   
   // LXe cylinder
-  G4Tubs* cylSolid = new G4Tubs ( "solid-cylinder", 0, 96/2*targetXSize, 97/2*targetXSize,  0, 2*pi );           
+  G4Tubs* cylSolid = new G4Tubs ( "solid-cylinder", 0, 96/2*targetXSize, 91.5/2*targetXSize,  0, 2*pi );           
                                   //12,20,30,0, 1.5*pi);
 
 
@@ -219,15 +207,60 @@ G4VPhysicalVolume* YourDetectorConstruction::Construct() {
                                                        fLXe, 
                                                        "logic-cylinder");                                 
   G4VPhysicalVolume* cylPhysical = new G4PVPlacement(nullptr,
-                                                        G4ThreeVector(0., 0., 0.),
+                                                        G4ThreeVector(0., 0., -2.75*targetXSize),
                                                         cylLogical, 
                                                         "Cylinder",
                                                         worldLogical,
                                                         false,
                                                         0);
+  
+  // Set visual attributes
+  G4VisAttributes* LXeVisAtt = new G4VisAttributes(G4Colour(0.1,0.9,0.1));
+  LXeVisAtt->SetVisibility(true);
+  cylLogical->SetVisAttributes(LXeVisAtt);
+
+  // GXe cylinder
+  G4Tubs* gasSolid = new G4Tubs ("solid-gas", 0, 96/2*targetXSize, 5.5/2*targetXSize,  0, 2*pi );
+  G4LogicalVolume* gasLogical = new G4LogicalVolume(gasSolid, fGXe, "logic-gas");
+  G4VPhysicalVolume* gasPhysical = new G4PVPlacement(nullptr,
+                                                        G4ThreeVector(0., 0., 45.75*targetXSize),
+                                                        gasLogical, 
+                                                        "Cylinder",
+                                                        worldLogical,
+                                                        false,
+                                                        0);
+  // Set visual attributes
+  G4VisAttributes* GXeVisAtt = new G4VisAttributes(G4Colour(0.3,0.85,0.3));
+  GXeVisAtt->SetVisibility(true);
+  gasLogical->SetVisAttributes(GXeVisAtt);     
+
+  // Set optical surface properties
+  G4OpticalSurface* OpLGSurface = new G4OpticalSurface("Liquid-Gas Xenon Surface");
+  OpLGSurface-> SetModel(unified);
+  OpLGSurface -> SetType(dielectric_dielectric);
+  OpLGSurface -> SetFinish(groundbackpainted);
+  
+  const G4int NUM = 2;
+  G4double pp[NUM] = {2.038*eV, 4.144*eV};
+  G4double specularlobe[NUM] = {0.3, 0.3};
+  G4double specularspike[NUM] = {0.2, 0.2};
+  G4double backscatter[NUM] = {0.1, 0.1};
+  G4double rindex[NUM] = {1.35, 1.40};
+  G4double reflectivity[NUM] = {0.03, 0.05};
+  G4double efficiency[NUM] = {0.8, 1.0};
+  G4MaterialPropertiesTable *SMPT = new G4MaterialPropertiesTable();
+  SMPT -> AddProperty("RINDEX", pp, rindex, NUM);
+  SMPT -> AddProperty("SPECULARLOBECONSTANT",pp,specularlobe,NUM);
+  SMPT ->AddProperty("SPECULARSPIKECONSTANT",pp,specularspike,NUM);
+  SMPT -> AddProperty("BACKSCATTERCONSTANT",pp,backscatter,NUM);
+  SMPT -> AddProperty("REFLECTIVITY",pp,reflectivity,NUM);
+  SMPT -> AddProperty("EFFICIENCY",pp,efficiency,NUM);
+  OpLGSurface -> SetMaterialPropertiesTable(SMPT);
+
+  //G4LogicalBorderSurface* WaterSurface = new G4LogicalBorderSurface("Liquid-Gas Xenon Surface",cylPhysical,gasPhysical,OpLGSurface);                                          
 
   // PTFE cylinder
-  G4Tubs* cylPTFE = new G4Tubs ( "PTFE-cylinder", 96/2*targetXSize, 96/2*targetXSize + 5*targetXSize, 97/2*targetXSize,  0, 2*pi );
+  G4Tubs* cylPTFE = new G4Tubs ( "PTFE-cylinder", 96/2*targetXSize, (96/2 + 5)*targetXSize, 97/2*targetXSize,  0, 2*pi );
   G4LogicalVolume* logicalPTFE = new G4LogicalVolume(cylPTFE, 
                                                        fPTFE, 
                                                        "logic-TPC PTFE");                                 
@@ -239,42 +272,19 @@ G4VPhysicalVolume* YourDetectorConstruction::Construct() {
                                                         false,
                                                         0);
 
-  // PTFE mirror
-  const G4double x = 40.0*cm;
-  const G4double y = 40.0*cm;
-  const G4double z = 1*cm;
-  G4Box * box = new G4Box("Mirror",x,y,z);
-  G4LogicalVolume* fReflectorLog = new G4LogicalVolume(box,fPTFE,"Reflector",0,0,0);  
-  G4ThreeVector SurfacePosition = G4ThreeVector(0.5*m,0*m,0) ;
-  // Rotate reflecting surface by 45. degrees around the OX axis.
-  G4RotationMatrix *Surfrot = new G4RotationMatrix(G4ThreeVector(0.0,1.0,0.0),-pi/4.);
-  new G4PVPlacement(Surfrot,SurfacePosition,"MirrorPV",fReflectorLog,worldPhysical,false,0);                                             
-
   // Set visual attributes
-  G4VisAttributes* XeVisAtt = new G4VisAttributes(G4Colour(0.1,0.9,0.1));
-  XeVisAtt->SetVisibility(true);
-  //XeVisAtt->SetForceWireframe(true);
-  cylLogical->SetVisAttributes(XeVisAtt);
-
   G4VisAttributes* SurfaceVisAtt = new G4VisAttributes(G4Colour(0.0,0.0,1.0));
   SurfaceVisAtt->SetVisibility(true);
-  //SurfaceVisAtt->SetForceWireframe(true);
   logicalPTFE->SetVisAttributes(SurfaceVisAtt);
 
   // create optical surfaces
-  fReflectorOpticalSurface = new G4OpticalSurface("ReflectorOpticalSurface");
-  fReflectorOpticalSurface->SetModel(unified);
-  fReflectorOpticalSurface->SetType(dielectric_dielectric);
-  fReflectorOpticalSurface->SetFinish(polished);
-
   fPTFEOpticalSurface = new G4OpticalSurface("ReflectorOpticalSurface");
   fPTFEOpticalSurface->SetModel(unified);
   fPTFEOpticalSurface->SetType(dielectric_dielectric);
-  fPTFEOpticalSurface->SetFinish(polished);
+  fPTFEOpticalSurface->SetFinish(polishedfrontpainted);
 
   // set bordersurface skinsurface and update runmanager
   //new G4LogicalBorderSurface("LXE PTFE surface", cylPhysical, physicalPTFE, fReflectorOpticalSurface);
-  new G4LogicalSkinSurface("ReflectorSurface",fReflectorLog,fReflectorOpticalSurface);
   new G4LogicalSkinSurface("ReflectorSurface",logicalPTFE,fPTFEOpticalSurface);
 
   G4RunManager* runManager = G4RunManager::GetRunManager();
@@ -282,4 +292,12 @@ G4VPhysicalVolume* YourDetectorConstruction::Construct() {
 
    // return the root (i.e. world worldPhysical volume ptr)
    return worldPhysical;                                                         
+}
+
+void YourDetectorConstruction::SetReflectionType(G4String rtype)
+{
+  G4RunManager* runManager = G4RunManager::GetRunManager();
+
+  fReflectionType = rtype;
+
 }

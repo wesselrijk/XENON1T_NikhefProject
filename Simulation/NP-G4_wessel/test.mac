@@ -18,7 +18,8 @@
 
 # Particle and energy
 /gun/particle opticalphoton
-/gun/energy 3 eV
+/gun/energy 3 keV
+/gun/direction 1 0 0.5
 
 # Set reflectivity?
-/detector/reflection specular
+#/detector/reflection specular
