@@ -1,0 +1,11 @@
+/control/execute vis.mac
+/score/create/cylinderMesh cylMesh
+/score/mesh/cylinderSize 48 97 cm
+/score/mesh/nBin 20 20 20
+/score/quantity/energyDeposit eDep MeV
+/score/quantity/nOfStep nOfStepGamma
+/score/filter/particle gammaFilter gamma
+/score/quantity/nOfStep nOfStepEMinus
+/score/filter/particle eMinusFilter e-
+/score/close
+

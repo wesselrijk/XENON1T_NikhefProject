@@ -1,0 +1,30 @@
+
+#include "globals.hh"
+
+
+#include "G4RunManager.hh"
+
+#include "G4PhysListFactory.hh"
+
+#include "YourDetectorConstruction.hh"
+#include "YourPrimaryGeneratorAction.hh"
+
+int main(int argc, char** argv) {
+  
+  //1. create the RunManager object 
+  G4RunManager* runManager = new G4RunManager();
+ 
+  //2. Create an object from YourDetectorConstruction and register in the Run-Manager
+  YourDetectorConstruction* detector = new YourDetectorConstruction();
+  runManager->SetUserInitialization( detector );
+   
+  //3. Create/obtain an Physics List and register it in the Run-Manager 
+  G4PhysListFactory physListFactory;
+  const G4String plName = "FTFP_BERT";
+  G4VModularPhysicsList* pl = physListFactory.GetReferencePhysList( plName );
+  runManager->SetUserInitialization( pl ); 
+
+  //VisManager goes here:
+  
+  return 0;
+}

@@ -1,0 +1,3 @@
+/user/stu411/G4/week4/ProgB/CMakeFiles/rebuild_cache.dir
+/user/stu411/G4/week4/ProgB/CMakeFiles/ourmain.dir
+/user/stu411/G4/week4/ProgB/CMakeFiles/edit_cache.dir
