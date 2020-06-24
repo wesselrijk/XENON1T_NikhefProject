@@ -43,7 +43,8 @@ private:
 
   void DefineMaterials();
   
-  G4Material* fTargetMaterial;   
+  G4Material* fTargetMaterial;  
+  G4Material* Air; 
   G4Material* fLXe;
   G4Material* fGXe;
   G4Material* fPTFE;

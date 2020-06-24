@@ -46,15 +46,7 @@
 
 YourDetectorConstruction::YourDetectorConstruction() 
 : G4VUserDetectorConstruction() {
-  // set default target material
-  G4String matName = "G4_Si";
-  fTargetMaterial  = G4NistManager::Instance()->FindOrBuildMaterial(matName);
-  if (fTargetMaterial == nullptr) {
-    G4cerr << "  ERROR YourDetectorConstruction() \n" 
-           << "  Material with name " << matName << " was not found! \n"
-           << G4endl;
-  }
-  
+    
   // set default target thickness
   fTargetThickness = 1.0*CLHEP::cm;
   // initial gun-x position 
@@ -85,8 +77,15 @@ void YourDetectorConstruction::DefineMaterials(){
   //***Elements
   G4Element* fC = new G4Element("C", "C", z=6., a=12.01*g/mole);
   G4Element* fF = new G4Element("F", "F", z=9, a=19.00*g/mole);
-
+  G4Element* elN = new G4Element("Nitrogen", "N", z=7 , a=14.01*g/mole);
+  G4Element* elO = new G4Element("Oxygen"  , "O", z=8 , a=16.00*g/mole);
+  
+  
   //***Materials
+  // Air
+  Air = new G4Material("Air", density=1.29*mg/cm3, 2);
+  Air->AddElement(elN, 70*perCent);
+  Air->AddElement(elO, 30*perCent);
   //Liquid Xenon
   fLXe = new G4Material("LXe",z=54.,a=131.29*g/mole,density=3.020*g/cm3);
   // Xenon gas defined using NIST Manager
@@ -97,6 +96,14 @@ void YourDetectorConstruction::DefineMaterials(){
   fPTFE->AddElement(fF, 4);
   
   //***Material properties tables
+  // Air
+  G4double PhotonEnergy[]    = { 7.0*eV , 7.07*eV, 7.14*eV };
+  G4double RefractiveIndex[] = {1., 1.};
+  G4MaterialPropertiesTable* myMPT2 = new G4MaterialPropertiesTable();
+  myMPT2->AddProperty("RINDEX", PhotonEnergy, RefractiveIndex, 2);
+  
+  Air->SetMaterialPropertiesTable(myMPT2);
+  
   // fLXe - example LXe and https://arxiv.org/pdf/1512.07501.pdf uses 1.63 for refractive index
   G4double lxe_Energy[]    = { 7.0*eV , 7.07*eV, 7.14*eV };
   const G4int lxenum = sizeof(lxe_Energy)/sizeof(G4double);
@@ -146,11 +153,8 @@ void YourDetectorConstruction::DefineMaterials(){
   const G4int wlsnum2 = sizeof(wls_Energy2)/sizeof(G4double);
  
   G4double rIndexGXe[]={ 1., 1., 1., 1.};
-  G4double fGXe_refl[]= { 0.01, 0.01, 0.01, 0.01 };
-  assert(sizeof(rIndexGXe) == sizeof(wls_Energy2));
   fGXe_mt->AddProperty("RINDEX", wls_Energy2,rIndexGXe,wlsnum2);
-  fGXe_mt->AddProperty("REFLECTIVITY", wls_Energy2, fGXe_refl, wlsnum2);
-  fGXe->SetMaterialPropertiesTable(fGXe_mt);
+  //fGXe->SetMaterialPropertiesTable(fGXe_mt);
 
   // Set the Birks Constant for the PTFE scintillator
   fGXe->GetIonisation()->SetBirksConstant(0.126*mm/MeV);
@@ -257,8 +261,9 @@ G4VPhysicalVolume* YourDetectorConstruction::Construct() {
   SMPT -> AddProperty("EFFICIENCY",pp,efficiency,NUM);
   OpLGSurface -> SetMaterialPropertiesTable(SMPT);
 
-  //G4LogicalBorderSurface* WaterSurface = new G4LogicalBorderSurface("Liquid-Gas Xenon Surface",cylPhysical,gasPhysical,OpLGSurface);                                          
-
+  // TODO check if you need this
+  //G4LogicalBorderSurface* LGSurface = new G4LogicalBorderSurface("Liquid-Gas Xenon Surface",cylPhysical,gasPhysical,OpLGSurface);                                          
+  
   // PTFE cylinder
   G4Tubs* cylPTFE = new G4Tubs ( "PTFE-cylinder", 96/2*targetXSize, (96/2 + 5)*targetXSize, 97/2*targetXSize,  0, 2*pi );
   G4LogicalVolume* logicalPTFE = new G4LogicalVolume(cylPTFE, 
@@ -277,6 +282,69 @@ G4VPhysicalVolume* YourDetectorConstruction::Construct() {
   SurfaceVisAtt->SetVisibility(true);
   logicalPTFE->SetVisAttributes(SurfaceVisAtt);
 
+//	------------- Surfaces --------------
+//
+// Water Tank
+//
+  G4OpticalSurface* OpWaterSurface = new G4OpticalSurface("WaterSurface");
+  OpWaterSurface->SetType(dielectric_dielectric);
+  OpWaterSurface->SetFinish(polished);
+  OpWaterSurface->SetModel(glisur);
+
+  G4LogicalBorderSurface* WaterSurface = 
+                                 new G4LogicalBorderSurface("WaterSurface",
+                                 cylPhysical,gasPhysical,OpWaterSurface);
+
+  if(WaterSurface->GetVolume1() == cylPhysical) G4cout << "Equal" << G4endl;
+  if(WaterSurface->GetVolume2() == worldPhysical  ) G4cout << "Equal" << G4endl;
+
+// Air Bubble
+//
+  G4OpticalSurface* OpAirSurface = new G4OpticalSurface("AirSurface");
+  OpAirSurface->SetType(dielectric_dielectric);
+  OpAirSurface->SetFinish(ground);
+  OpAirSurface->SetModel(unified);
+
+  //G4LogicalSkinSurface* AirSurface = 
+	//  new G4LogicalSkinSurface("AirSurface", gasLogical, OpAirSurface);
+  //G4LogicalBorderSurface* LGSurface = new G4LogicalBorderSurface("Liquid-Gas Xenon Surface",cylPhysical,gasPhysical,OpWaterSurface);
+
+//if(AirSurface->GetLogicalVolume() == gasLogical) G4cout << "Equal" << G4endl;
+//   AirSurface->GetSurface(gasLogical)->GetOpticalSurface()->DumpInfo();
+
+//
+// Generate & Add Material Properties Table attached to the optical surfaces
+//
+  const G4int num = 2;
+  G4double Ephoton[num] = {2.038*eV, 4.144*eV};
+
+  //OpticalWaterSurface 
+  G4double RefractiveIndex[num] = {1.35, 1.40};
+  G4double SpecularLobe[num]    = {0.3, 0.3};
+  G4double SpecularSpike[num]   = {0.2, 0.2};
+  G4double Backscatter[num]     = {0.2, 0.2};
+
+  G4MaterialPropertiesTable* myST1 = new G4MaterialPropertiesTable();
+  
+  myST1->AddProperty("RINDEX",                Ephoton, RefractiveIndex, num);
+  myST1->AddProperty("SPECULARLOBECONSTANT",  Ephoton, SpecularLobe,    num);
+  myST1->AddProperty("SPECULARSPIKECONSTANT", Ephoton, SpecularSpike,   num);
+  myST1->AddProperty("BACKSCATTERCONSTANT",   Ephoton, Backscatter,     num);
+
+  OpWaterSurface->SetMaterialPropertiesTable(myST1);
+
+  //OpticalAirSurface
+  G4double Reflectivity[num] = {0.3, 0.5};
+  G4double Efficiency[num]   = {0.8, 1.0};
+
+  G4MaterialPropertiesTable *myST2 = new G4MaterialPropertiesTable();
+
+  myST2->AddProperty("REFLECTIVITY", Ephoton, Reflectivity, num);
+  myST2->AddProperty("EFFICIENCY",   Ephoton, Efficiency,   num);
+
+  OpAirSurface->SetMaterialPropertiesTable(myST2);
+
+  // PTFE
   // create optical surfaces
   fPTFEOpticalSurface = new G4OpticalSurface("ReflectorOpticalSurface");
   fPTFEOpticalSurface->SetModel(unified);

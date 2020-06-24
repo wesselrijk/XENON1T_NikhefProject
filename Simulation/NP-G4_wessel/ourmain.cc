@@ -3,6 +3,8 @@
 #include "G4VisManager.hh"
 #include "G4VisExecutive.hh"
 #include "G4UIExecutive.hh"
+#include "G4UImanager.hh"
+#include "G4UIcommand.hh"
 #include "G4RunManager.hh"
 #include "G4ScoringManager.hh"
 #include "G4EventManager.hh"
@@ -67,10 +69,12 @@ int main(int argc, char** argv) {
   
   // add verbosity
   G4EventManager::GetEventManager()->GetTrackingManager()->SetVerboseLevel(1);
+
+  auto UImanager = G4UImanager::GetUIpointer();
   
   // simulate 10 events
   //runManager->BeamOn(10); 
-  
+  UImanager->ApplyCommand("/control/execute test.mac");
   ui->SessionStart();
 
   // delete the Run-manager
