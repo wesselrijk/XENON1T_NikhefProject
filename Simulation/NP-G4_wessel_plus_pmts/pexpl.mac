@@ -1,0 +1,50 @@
+/vis/open OGL
+/run/initialize
+/vis/drawVolume
+/vis/geometry/set/visibility logic-World 0  false
+
+# Add axes (orientation) and a scale (size)
+/vis/scene/add/axes 
+/vis/scene/add/scale
+
+# Add (smooth) trajectories 
+/vis/scene/add/trajectories smooth
+
+# Set the view point in terms angles 
+/vis/viewer/set/viewpointThetaPhi -40 -50
+
+# Set to accumulate trajectories up to 100 events
+/vis/scene/endOfEventAction accumulate 100
+
+# Set particle to optical photon
+/gun/particle opticalphoton
+
+# set reflection?
+#/detector/reflection specular
+
+
+# Set directions and run beam
+/gun/direction 1 0 0
+/run/beamOn 1
+/gun/direction 0 1 0
+/run/beamOn 1
+/gun/direction -1 0 0
+/run/beamOn 1
+/gun/direction 0 -1 0
+/run/beamOn 1
+/gun/direction 0 1 0.5
+/run/beamOn 1
+/gun/direction 1 0 0.5
+/run/beamOn 1
+/gun/direction -1 0 0.5
+/run/beamOn 1
+/gun/direction 0 -1 0.5
+/run/beamOn 1
+/gun/direction 1 0 -0.5
+/run/beamOn 1
+/gun/direction 0 1 -0.5
+/run/beamOn 1
+/gun/direction -1 0 -0.5
+/run/beamOn 1
+/gun/direction 0 -1 -0.5
+/run/beamOn 1
