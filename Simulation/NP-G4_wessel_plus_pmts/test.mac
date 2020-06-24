@@ -18,8 +18,10 @@
 
 # Particle and energy
 /gun/particle opticalphoton
-/gun/energy 3 keV
-/gun/direction 1 0 0.5
+/gun/energy 10 keV
+/gun/direction 0 0 -1
 
 # Set reflectivity?
 #/detector/reflection specular
+
+/run/beamOn 1

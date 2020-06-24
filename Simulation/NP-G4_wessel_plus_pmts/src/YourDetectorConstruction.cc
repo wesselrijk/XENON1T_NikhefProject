@@ -1,5 +1,6 @@
 
 #include "YourDetectorConstruction.hh"
+#include "MySD.hh"  // the sensitive detector and hit class links
 
 #include "G4Material.hh"
 #include "G4MaterialTable.hh" // table needed for LXe and PTFE!
@@ -353,9 +354,14 @@ G4Tubs* pmtSolid = new G4Tubs ( "pmt-cylinder", 0, 0.762*targetXSize, targetXSiz
                                   
 
 
-  G4LogicalVolume* pmtLogical = new G4LogicalVolume(pmtSolid, 
+G4LogicalVolume* pmtLogical = new G4LogicalVolume(pmtSolid, 
                                                        fQuartz, 
                                                        "logic-pmt");
+
+// Making the sensitive detector and adding it to "logic-pmt"
+auto PMTSD = new MySD("MySD", "MyHitsCollection");
+SetSensitiveDetector("logic-pmt", PMTSD);
+
 // Top cap PMTs                                                       
   for (int i=0; i<127; i++) {
       G4VPhysicalVolume* pmtPhysical = new G4PVPlacement(nullptr,

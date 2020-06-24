@@ -18,11 +18,11 @@ YourPrimaryGeneratorAction::YourPrimaryGeneratorAction(YourDetectorConstruction*
   G4ParticleDefinition* part = G4Electron::Definition();
   fParticleGun->SetParticleDefinition(part);
   // direction: 1,0,0 i.e. to the target 
-  fParticleGun->SetParticleMomentumDirection( G4ThreeVector(1.0, 0.0, 0.0) );
+  fParticleGun->SetParticleMomentumDirection( G4ThreeVector(0.0, 0.0, 1.0) );
   // kinetic energy:  30 MeV
   fParticleGun->SetParticleEnergy(30.0*CLHEP::MeV);
   // set postion
-  fParticleGun->SetParticlePosition( G4ThreeVector(fYourDetector->GetGunXPosition(), 0.0, 0.0) );
+  fParticleGun->SetParticlePosition(G4ThreeVector(0.0, 0.0, 0.0) ); // G4ThreeVector(fYourDetector->GetGunXPosition()
 }
 
 YourPrimaryGeneratorAction::~YourPrimaryGeneratorAction(){
