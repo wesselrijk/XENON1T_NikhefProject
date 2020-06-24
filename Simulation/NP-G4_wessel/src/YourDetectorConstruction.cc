@@ -46,7 +46,7 @@
 
 YourDetectorConstruction::YourDetectorConstruction() 
 : G4VUserDetectorConstruction() {
-    
+
   // set default target thickness
   fTargetThickness = 1.0*CLHEP::cm;
   // initial gun-x position 
@@ -153,8 +153,10 @@ void YourDetectorConstruction::DefineMaterials(){
   const G4int wlsnum2 = sizeof(wls_Energy2)/sizeof(G4double);
  
   G4double rIndexGXe[]={ 1., 1., 1., 1.};
+  G4double GXe_refl[] = {0.,0.,0.,0.};
   fGXe_mt->AddProperty("RINDEX", wls_Energy2,rIndexGXe,wlsnum2);
-  //fGXe->SetMaterialPropertiesTable(fGXe_mt);
+  fGXe_mt->AddProperty("REFLECTIVITY", wls_Energy2, GXe_refl, wlsnum2);
+  fGXe->SetMaterialPropertiesTable(fGXe_mt);
 
   // Set the Birks Constant for the PTFE scintillator
   fGXe->GetIonisation()->SetBirksConstant(0.126*mm/MeV);
@@ -242,16 +244,16 @@ G4VPhysicalVolume* YourDetectorConstruction::Construct() {
   G4OpticalSurface* OpLGSurface = new G4OpticalSurface("Liquid-Gas Xenon Surface");
   OpLGSurface-> SetModel(unified);
   OpLGSurface -> SetType(dielectric_dielectric);
-  OpLGSurface -> SetFinish(groundbackpainted);
+  OpLGSurface -> SetFinish(groundfrontpainted);
   
   const G4int NUM = 2;
   G4double pp[NUM] = {2.038*eV, 4.144*eV};
   G4double specularlobe[NUM] = {0.3, 0.3};
   G4double specularspike[NUM] = {0.2, 0.2};
   G4double backscatter[NUM] = {0.1, 0.1};
-  G4double rindex[NUM] = {1.35, 1.40};
-  G4double reflectivity[NUM] = {0.03, 0.05};
-  G4double efficiency[NUM] = {0.8, 1.0};
+  G4double rindex[NUM] = {1., 1.}; // was 1.35, 1.40
+  G4double reflectivity[NUM] = {0.01, 0.01};
+  G4double efficiency[NUM] = {0.95, 1.0}; // was 0.8, 1.0
   G4MaterialPropertiesTable *SMPT = new G4MaterialPropertiesTable();
   SMPT -> AddProperty("RINDEX", pp, rindex, NUM);
   SMPT -> AddProperty("SPECULARLOBECONSTANT",pp,specularlobe,NUM);
@@ -262,7 +264,7 @@ G4VPhysicalVolume* YourDetectorConstruction::Construct() {
   OpLGSurface -> SetMaterialPropertiesTable(SMPT);
 
   // TODO check if you need this
-  //G4LogicalBorderSurface* LGSurface = new G4LogicalBorderSurface("Liquid-Gas Xenon Surface",cylPhysical,gasPhysical,OpLGSurface);                                          
+  G4LogicalBorderSurface* LGSurface = new G4LogicalBorderSurface("Liquid-Gas Xenon Surface",gasPhysical,cylPhysical,OpLGSurface);                                          
   
   // PTFE cylinder
   G4Tubs* cylPTFE = new G4Tubs ( "PTFE-cylinder", 96/2*targetXSize, (96/2 + 5)*targetXSize, 97/2*targetXSize,  0, 2*pi );

@@ -163,8 +163,10 @@ void YourDetectorConstruction::DefineMaterials(){
   const G4int wlsnum2 = sizeof(wls_Energy2)/sizeof(G4double);
  
   G4double rIndexGXe[]={ 1., 1., 1., 1.};
+  G4double GXe_refl[] = {0.,0.,0.,0.};
   fGXe_mt->AddProperty("RINDEX", wls_Energy2,rIndexGXe,wlsnum2);
-  //fGXe->SetMaterialPropertiesTable(fGXe_mt);
+  fGXe_mt->AddProperty("REFLECTIVITY", wls_Energy2, GXe_refl, wlsnum2);
+  fGXe->SetMaterialPropertiesTable(fGXe_mt);
 
   // Set the Birks Constant for the PTFE scintillator
   fGXe->GetIonisation()->SetBirksConstant(0.126*mm/MeV);
