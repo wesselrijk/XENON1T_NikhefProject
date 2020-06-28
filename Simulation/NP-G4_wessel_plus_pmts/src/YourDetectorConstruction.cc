@@ -365,7 +365,7 @@ SetSensitiveDetector("logic-pmt", PMTSD);
       G4VPhysicalVolume* pmtPhysical = new G4PVPlacement(nullptr,
                                                             G4ThreeVector(x_pos[i]*targetXSize, y_pos[i]*targetXSize, 0.),
                                                             pmtLogical, 
-                                                            "PMT",
+                                                            std::to_string(i),
                                                             TopLogical,
                                                             false,
                                                             0);
@@ -376,7 +376,7 @@ SetSensitiveDetector("logic-pmt", PMTSD);
       G4VPhysicalVolume* pmtPhysical = new G4PVPlacement(nullptr,
                                                             G4ThreeVector(x_pos[j]*targetXSize, y_pos[j]*targetXSize, 0.),
                                                             pmtLogical, 
-                                                            "PMT",
+                                                            std::to_string(j),
                                                             BottomLogical,
                                                             false,
                                                             0);

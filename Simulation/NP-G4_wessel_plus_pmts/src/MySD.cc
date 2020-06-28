@@ -44,18 +44,22 @@ MyHit* newHit = new MyHit();
 
 // I use the pre point to get the kinetic energy of the particle (it's still called edep, sorry)
 G4StepPoint* prePoint = step->GetPreStepPoint();
+if (prePoint->GetMass() != 0) {
+    return false;
+}
 G4double edep = prePoint->GetKineticEnergy();
-G4double rel_time = prePoint->GetLocalTime();
+G4double rel_time = prePoint->GetGlobalTime();
 G4ThreeVector postion = prePoint->GetPosition();
-
+std::string pmt = prePoint->GetPhysicalVolume()->GetName();
 G4cout << "the edep is " << edep << G4endl;
 // We can add properties to Hit here that we want to save
 // newHit->SetXYZ();
 newHit->SetEdep(edep);
 newHit->SetTime(rel_time);
 newHit->SetPos(postion);
-newHit->Draw();
-G4cout << newHit->GetEdep() << G4endl;
+newHit->SetPMT(pmt);
+//newHit->Draw();
+//G4cout << newHit->GetEdep() << G4endl;
 
 // add the hit to our hitlist _hits
 if (edep > 0){
@@ -69,7 +73,7 @@ fstream ofile("data.dat", ios::out);
 int counter = 1;
 for (auto iterator=_hits.begin(); iterator!=_hits.end(); ++iterator, ++counter) 
 {
-    ofile << counter << ";" <<(*iterator)->GetEdep()<< ";" << (*iterator)->GetTime() << ";" << (*iterator)->GetPos() << "\n";
+    ofile << counter << ";" <<(*iterator)->GetPMT()<< ";" <<(*iterator)->GetEdep() << ";" << (*iterator)->GetTime() << ";" << (*iterator)->GetPos() << "\n";
 }
 ofile.close();
 

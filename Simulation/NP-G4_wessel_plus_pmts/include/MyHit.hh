@@ -17,6 +17,8 @@ public:
     G4ThreeVector GetPos();// const
     void SetTime (G4double time);
     G4double GetTime();// const;
+    void SetPMT (std::string PMT);
+    std::string GetPMT();// const;
 
     virtual void Draw();
     virtual void Print();
@@ -28,6 +30,7 @@ private:
     G4double fEdep; // energy deposit
     G4ThreeVector _pos;
     G4double _time;
+    std::string _PMT;
 
 
 };

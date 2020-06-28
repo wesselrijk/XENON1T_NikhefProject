@@ -31,6 +31,13 @@ G4double MyHit::GetTime(){// const;
     return _time;
     }
 
+void MyHit::SetPMT (std::string pmt){
+    _PMT = pmt;
+    }
+std::string MyHit::GetPMT(){// const;
+    return _PMT;
+    }
+
 
 void MyHit::Draw()
 {   
@@ -39,3 +46,4 @@ void MyHit::Draw()
     
     G4cout << "Done drawing them things" << G4endl;
 }
+
