@@ -62,7 +62,11 @@ int main(int argc, char** argv) {
   //VisManager goes here:
   G4VisManager* visManager = new G4VisExecutive();
   visManager->Initialize();
-  G4UIExecutive* ui = new G4UIExecutive(argc, argv);
+  G4UIExecutive* ui = 0;
+  if (argc == 1) {
+    ui =new G4UIExecutive(argc, argv);
+  }
+  
 
   // initialization of the run
   runManager->Initialize();
@@ -73,9 +77,16 @@ int main(int argc, char** argv) {
   auto UImanager = G4UImanager::GetUIpointer();
   
   // simulate 10 events
-  //runManager->BeamOn(10); 
-  UImanager->ApplyCommand("/control/execute test.mac");
-  ui->SessionStart();
+  //runManager->BeamOn(10);
+  if (! ui) {
+    // batch mode
+    G4String command = "/control/execute ";
+    G4String fileName = argv[1];
+  } else {
+    UImanager->ApplyCommand("/control/execute test.mac");
+    ui->SessionStart();
+    delete ui;
+  }
 
   // delete the Run-manager
   delete runManager;
