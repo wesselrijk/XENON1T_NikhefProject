@@ -67,7 +67,6 @@ int main(int argc, char** argv) {
     ui =new G4UIExecutive(argc, argv);
   }
   
-
   // initialization of the run
   runManager->Initialize();
   
@@ -82,6 +81,7 @@ int main(int argc, char** argv) {
     // batch mode
     G4String command = "/control/execute ";
     G4String fileName = argv[1];
+    UImanager->ApplyCommand(command + fileName);
   } else {
     UImanager->ApplyCommand("/control/execute test.mac");
     ui->SessionStart();
