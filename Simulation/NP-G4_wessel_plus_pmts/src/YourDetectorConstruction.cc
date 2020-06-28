@@ -348,7 +348,7 @@ G4VPhysicalVolume* YourDetectorConstruction::Construct() {
 
 // Define the geometry of the PMTs ----------------------
 
-G4Tubs* pmtSolid = new G4Tubs ( "pmt-cylinder", 0, 0.762*targetXSize, targetXSize,  0, 2*pi );           
+G4Tubs* pmtSolid = new G4Tubs ( "pmt-cylinder", 0, 7.62/2*targetXSize, targetXSize,  0, 2*pi );           
                                   
 
 

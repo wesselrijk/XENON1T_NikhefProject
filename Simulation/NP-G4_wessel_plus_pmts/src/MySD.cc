@@ -6,6 +6,11 @@
 #include "G4ThreeVector.hh"
 #include "G4ios.hh"
 
+
+#include <fstream>
+#include <iostream>
+using namespace std;
+
 // -------------------------------------------------------------------------
 //  The sensitive detector class.
 //  The function that's interesting is ProcessHits
@@ -40,11 +45,15 @@ MyHit* newHit = new MyHit();
 // I use the pre point to get the kinetic energy of the particle (it's still called edep, sorry)
 G4StepPoint* prePoint = step->GetPreStepPoint();
 G4double edep = prePoint->GetKineticEnergy();
+G4double rel_time = prePoint->GetLocalTime();
+G4ThreeVector postion = prePoint->GetPosition();
 
 G4cout << "the edep is " << edep << G4endl;
 // We can add properties to Hit here that we want to save
 // newHit->SetXYZ();
 newHit->SetEdep(edep);
+newHit->SetTime(rel_time);
+newHit->SetPos(postion);
 newHit->Draw();
 G4cout << newHit->GetEdep() << G4endl;
 
@@ -55,19 +64,26 @@ if (edep > 0){
 
 // check if everything worked
 G4cout << "it's doing something!" << G4endl;
-_hits.back()->Draw();
-G4cout << _hits.size() << "  :  " << _hits.back() << G4endl;
+
+fstream ofile("data.dat", ios::out);
+int counter = 1;
+for (auto iterator=_hits.begin(); iterator!=_hits.end(); ++iterator, ++counter) 
+{
+    ofile << counter << ";" <<(*iterator)->GetEdep()<< ";" << (*iterator)->GetTime() << ";" << (*iterator)->GetPos() << "\n";
+}
+ofile.close();
+
 G4cout << "end?" << G4endl;
 return true;
 }
 
 // we can perhaps use this later
-void MySD::EndOfEvent(G4HCofThisEvent*)
+void MySD::EndOfEvent(G4HCofThisEvent*) //
 {
     G4cout
     << G4endl 
     << "-------->Hits Collection: in this event they are "  
     << " hits in the tracker chambers: " << G4endl;
-    for ( std::size_t i=0; i<100; ++i ) (*fHitsCollection)[i]->Print();
+    //for ( std::size_t i=0; i<_hits.size(); ++i ) (*fHitsCollection)[i]->Print();
     
 }

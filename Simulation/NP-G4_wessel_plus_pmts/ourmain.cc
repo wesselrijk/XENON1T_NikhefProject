@@ -13,7 +13,7 @@
 
 #include "FTFP_BERT.hh" // physics list, double for now, since already obtained from the factory
 #include "G4OpticalPhysics.hh" // for optical physics (includes optical photon?)
-#include "G4EmStandardPhysics_option4.hh" // physics list
+#include "G4EmStandardPhysics_option1.hh" // physics list
 
 #include "YourDetectorConstruction.hh"
 #include "YourPrimaryGeneratorAction.hh"
@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
   const G4String plName = "FTFP_BERT";
   G4VModularPhysicsList* physicsList = physListFactory.GetReferencePhysList( plName );
 
-  physicsList->ReplacePhysics(new G4EmStandardPhysics_option4());
+  physicsList->ReplacePhysics(new G4EmStandardPhysics_option1());
   G4OpticalPhysics* opticalPhysics = new G4OpticalPhysics();
   opticalPhysics->SetWLSTimeProfile("delta");
 

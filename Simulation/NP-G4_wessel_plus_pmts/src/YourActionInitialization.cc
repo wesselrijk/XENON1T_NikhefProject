@@ -18,9 +18,9 @@ void YourActionInitialization::Build() const {
   SetUserAction(eventAction);
   YourRunAction *runAction = new YourRunAction(eventAction);
   SetUserAction(runAction);
-  YourTrackingAction *trackAction = new YourTrackingAction();
-  SetUserAction(trackAction);
-  YourSteppingAction *stepAction = new YourSteppingAction(eventAction);
-  SetUserAction(stepAction);
+  // YourTrackingAction *trackAction = new YourTrackingAction();
+  // SetUserAction(trackAction);
+  // YourSteppingAction *stepAction = new YourSteppingAction(eventAction);
+  // SetUserAction(stepAction);
   
 }
