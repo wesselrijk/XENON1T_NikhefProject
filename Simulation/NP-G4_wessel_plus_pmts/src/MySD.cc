@@ -69,13 +69,19 @@ if (edep > 0){
 // check if everything worked
 //G4cout << "it's doing something!" << G4endl;
 
-fstream ofile("data.dat", ios::out);
-int counter = 1;
-for (auto iterator=_hits.begin(); iterator!=_hits.end(); ++iterator, ++counter) 
-{
+G4cout << _hits.size() << G4endl;
+
+
+if (_hits.size() == 200000) {
+    fstream ofile("data.dat", ios::out);
+    int counter = 1;
+    for (auto iterator=_hits.begin(); iterator!=_hits.end(); ++iterator, ++counter) 
+    {
     ofile << counter << ";" <<(*iterator)->GetPMT()<< ";" <<(*iterator)->GetEdep() << ";" << (*iterator)->GetTime() << ";" << (*iterator)->GetPos() << "\n";
+    }
+    ofile.close();
 }
-ofile.close();
+
 
 //G4cout << "end?" << G4endl;
 return true;

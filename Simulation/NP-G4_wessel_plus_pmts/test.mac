@@ -18,11 +18,11 @@
 
 # Particle and energy
 /gun/particle neutron
-/gun/energy 8 MeV
+/gun/energy 2.2 MeV
 /gun/position -1.1 0 0 m
 /gun/direction 1 0 0
 
 # Set reflectivity?
 #/detector/reflection specular
 
-/run/beamOn 1
+/run/beamOn 18
