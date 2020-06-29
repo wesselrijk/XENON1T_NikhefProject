@@ -71,7 +71,7 @@ int main(int argc, char** argv) {
   runManager->Initialize();
   
   // add verbosity
-  G4EventManager::GetEventManager()->GetTrackingManager()->SetVerboseLevel(1);
+  //G4EventManager::GetEventManager()->GetTrackingManager()->SetVerboseLevel(1);
 
   auto UImanager = G4UImanager::GetUIpointer();
   

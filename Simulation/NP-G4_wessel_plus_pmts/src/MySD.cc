@@ -51,7 +51,7 @@ G4double edep = prePoint->GetKineticEnergy();
 G4double rel_time = prePoint->GetGlobalTime();
 G4ThreeVector postion = prePoint->GetPosition();
 std::string pmt = prePoint->GetPhysicalVolume()->GetName();
-G4cout << "the edep is " << edep << G4endl;
+//G4cout << "the edep is " << edep << G4endl;
 // We can add properties to Hit here that we want to save
 // newHit->SetXYZ();
 newHit->SetEdep(edep);
@@ -67,7 +67,7 @@ if (edep > 0){
 }   
 
 // check if everything worked
-G4cout << "it's doing something!" << G4endl;
+//G4cout << "it's doing something!" << G4endl;
 
 fstream ofile("data.dat", ios::out);
 int counter = 1;
@@ -77,17 +77,19 @@ for (auto iterator=_hits.begin(); iterator!=_hits.end(); ++iterator, ++counter)
 }
 ofile.close();
 
-G4cout << "end?" << G4endl;
+//G4cout << "end?" << G4endl;
 return true;
 }
 
 // we can perhaps use this later
-void MySD::EndOfEvent(G4HCofThisEvent*) //
+void MySD::EndOfEvent(G4HCofThisEvent* hce) //
 {
     G4cout
     << G4endl 
     << "-------->Hits Collection: in this event they are "  
-    << " hits in the tracker chambers: " << G4endl;
+    << " hits in the tracker chambers: " 
+    << " I FUCKING LOVE GEANT4 IT'S THE BEST THING EVER LIKE DAAAAAAAAMN"
+    << G4endl;
     //for ( std::size_t i=0; i<_hits.size(); ++i ) (*fHitsCollection)[i]->Print();
     
 }
