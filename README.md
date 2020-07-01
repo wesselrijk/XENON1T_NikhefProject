@@ -1,6 +1,6 @@
 # XENON1T_NikhefProject
 
-This is the repository used for the final project of the 'Nikhef Project' course of the 'Physics and Astronomy' Master's programme of the Universiteit van Amsterdam for 2019/20 semester 2 period 2 & 3.
+This is the working repository used for the final project of the 'Nikhef Project' course of the 'Physics and Astronomy' Master's programme of the Universiteit van Amsterdam for 2019/20 semester 2 period 2 & 3.
 
 ## Members
 - Marjolein Heidotting (our benevolent dictator)
@@ -10,6 +10,7 @@ This is the repository used for the final project of the 'Nikhef Project' course
 - Joey Staa
 - Christina Tsolanta
 - Zhuoran Feng
+- Wessel Rijk
 
 ## Goal
 The goal of the final project is to write a data reconstruction package for the XENON1T dark matter experiment. This shouldinclude the actual reconstruction program, (Geant4) simulations, notebooks and a final report, written jointly by you all. You will build upon the start you made with theXAMS data. The explicit goal is to not only make and describe yourXENON1T reconstruction, but do so as a collaboration –just like the experimental collaborations are doing! 
